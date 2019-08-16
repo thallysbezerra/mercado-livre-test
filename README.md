@@ -30,7 +30,11 @@
    <details>
    <summary>Dependencies</summary>
 
+   -  chai
+   -  enzyme
+   -  enzyme-adapter-react-16
    -  node-sass
+   -  react-test-renderer
 
    </details>
 
@@ -39,7 +43,7 @@
 ## API
 
 -  API call using `fetch`, without external dependencies.
--  Success, requesting and error feedback combining `fetch` and `catch` with ternaries.
+-  Success, requesting and error feedback combining `fetch` and `catch` with switch statement.
 
 ## CSS
 
@@ -66,6 +70,7 @@
 -  Arrow functions instead of `bind.this`, simplifying code.
 -  Destructuring of states and props to keep a clean code and declarative.
 -  `.map` to list items from API.
+-  `onKeyPress` attributes to provide better UI interaction.
 -  `PropTypes` to better component maintenance and understanding.
 -  Reusable components are located on directory `/components`.
 -  Some components are stateless, focused on performance.

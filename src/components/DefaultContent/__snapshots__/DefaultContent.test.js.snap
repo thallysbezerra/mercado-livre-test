@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultContent UI <DefaultContent /> must have the snapshot version. 1`] = `
+<div
+  className="default-content"
+>
+  Busque un producto en campo arriba.
+</div>
+`;

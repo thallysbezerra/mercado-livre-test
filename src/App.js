@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+
+import DefaultContent from './components/DefaultContent/DefaultContent';
+import Error from './components/Error/Error';
 import Header from './components/Header/Header';
+import Loading from './components/Loading/Loading';
 import ProductList from './components/ProductList/ProductList';
 
 export default class App extends Component {
@@ -53,13 +57,13 @@ export default class App extends Component {
 
 		switch (param) {
 			case 'error':
-				return 'Error';
+				return <Error />;
 			case 'requesting':
-				return 'Requesting';
+				return <Loading />;
 			case 'success':
 				return <ProductList list={apiStatus === 'success' && api} />;
 			default:
-				return 'Content';
+				return <DefaultContent />;
 		}
 	}
 

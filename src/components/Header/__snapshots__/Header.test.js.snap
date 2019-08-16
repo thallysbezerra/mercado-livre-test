@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header UI <Header /> must have the snapshot version. 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container flex-container"
+  >
+    <div
+      className="header__logo"
+    >
+      <img
+        alt="Logo - Mercado Libre"
+        className="header__logo__img"
+        src="logo-ml.png"
+      />
+    </div>
+    <div
+      className="header__search"
+    >
+      <input
+        className="input-text header__search__input-text"
+        placeholder="Nunca dejes de buscar"
+        type="text"
+      />
+      <button
+        className="button header__search__button button--small"
+        id="searchButton"
+        onClick={[Function]}
+      >
+        <i
+          className="button__icon fas fa-search"
+        />
+      </button>
+    </div>
+  </div>
+</header>
+`;

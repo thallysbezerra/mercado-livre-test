@@ -21,4 +21,10 @@ Button.propTypes = {
 	onClick: PropTypes.func.isRequired
 };
 
+Button.defaultProps = {
+	onClick: () => {
+		console.log('This button needs to do something');
+	}
+};
+
 export default Button;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputText UI <InputText /> must have the snapshot version. 1`] = `
+<input
+  className="input-text undefined"
+  placeholder="Needs placeholder text"
+  type="text"
+/>
+`;

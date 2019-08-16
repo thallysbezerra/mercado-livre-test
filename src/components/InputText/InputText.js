@@ -6,6 +6,7 @@ export default class Input extends Component {
 	render() {
 		const {
 			className,
+			id,
 			onChange,
 			onKeyPress,
 			placeholder,
@@ -14,6 +15,7 @@ export default class Input extends Component {
 		return (
 			<input
 				className={`input-text ${className}`}
+				id={id}
 				onChange={onChange}
 				onKeyPress={onKeyPress}
 				placeholder={placeholder}
@@ -26,8 +28,13 @@ export default class Input extends Component {
 
 Input.propTypes = {
 	className: PropTypes.string,
+	id: PropTypes.string,
 	onChange: PropTypes.func,
 	onKeyPress: PropTypes.func,
 	placeholder: PropTypes.string.isRequired,
 	value: PropTypes.string
+};
+
+Input.defaultProps = {
+	placeholder: 'Needs placeholder text'
 };

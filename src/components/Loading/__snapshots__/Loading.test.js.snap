@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading UI <Loading /> must have the snapshot version. 1`] = `
+<div
+  className="loading"
+>
+  <div
+    className="loading__bar--1"
+  />
+  <div
+    className="loading__bar--2"
+  />
+  <div
+    className="loading__bar--3"
+  />
+</div>
+`;
