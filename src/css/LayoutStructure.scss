@@ -1,0 +1,11 @@
+// Layout structure
+
+.container {
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@include breakpoint(desktop) {
+		max-width: 1200px;
+		padding: 0;
+	}
+}

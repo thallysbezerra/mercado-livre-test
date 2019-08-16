@@ -1,0 +1,23 @@
+@import '../../css/Theme.scss';
+
+.button {
+	align-items: center;
+	background-color: $grey-light;
+	border: none;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: $grey-dark;
+	display: flex;
+	height: 36px;
+	justify-content: center;
+	transition: color 0.15s ease-in-out;
+
+	&:hover {
+		color: $black;
+		cursor: pointer;
+	}
+
+	&--small {
+		width: 36px;
+	}
+}

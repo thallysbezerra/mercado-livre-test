@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Development Stack
 
-## Available Scripts
+-  **Assets extraction**: Figma
 
-In the project directory, you can run:
+-  **Code editor**: Visual Studio Code
 
-### `npm start`
+   <details>
+   <summary>Important extensions</summary>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   -  Auto Rename Tag
+   -  Auto-Open Markdown Preview
+   -  Brackt Pair Colorizer
+   -  VS Code ES7 React/Redux/React-Native/JS snippets
+   -  ESLint
+   -  GitLens
+   -  JavaScript (ES6) code snippets
+   -  Prettier - Code formatter
+   -  SCSS formatter
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+   </details>
 
-### `npm test`
+-  **CSS preprocessor**: SASS/SCSS
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  **Hosting**: Firebase
 
-### `npm run build`
+-  **Lib/Framework**: React.js using create-react-app
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  **Package manager**: NPM/Yarn
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+   <details>
+   <summary>Dependencies</summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   -  node-sass
 
-### `npm run eject`
+   </details>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-  **Server**: Node.js
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-  API call using `fetch`, without external dependencies.
+-  Success, requesting and error feedback combining `fetch` and `catch` with ternaries.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## CSS
 
-## Learn More
+-  All CSS/SCSS theme files are imported on `theme`.
+-  Animations on `:hover` in buttons to give feedback of interaction to user.
+-  B.E.M. (Block Element Modifier) class naming methodology.
+-  Breakpoints as mixin, included inside own selector in order to facilitate maintenance.
+-  CSS Grid and CSS Flexbox to define layout structures.
+-  Each component have your own SCSS file.
+-  Mobile first with four breakpoints using:
+   -  Only on mobile: Screen resolution <= 767px.
+   -  Tablet portrait mode: Screen resolution >= 768px.
+   -  Tablet landscape mode: Screen resolution >= 1024px.
+   -  Desktop: Screen resolution >= 1280px.
+-  Using SASS/SCSS.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## HTML
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-  HTML5 following W3C Standards recommendations.
+-  Favicon generated on https://www.favicon-generator.org/
 
-### Code Splitting
+## Javascript
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+-  Arrow functions instead of `bind.this`, simplifying code.
+-  Destructuring of states and props to keep a clean code and declarative.
+-  `.map` to list items from API.
+-  `PropTypes` to better component maintenance and understanding.
+-  Reusable components are located on directory `/components`.
+-  Some components are stateless, focused on performance.
 
-### Analyzing the Bundle Size
+## Tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+-  Jest as test runner inside create-react-app.
+-  Simple tests to verify if application is rendering without crashing and initial states are initializing correctly.
+-  Statics components with snapshots tests to avoid components changes.
 
-### Making a Progressive Web App
+# Instructions to run tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+-  `npm test`, or `yarn test` on root directory to run application tests.
 
-### Advanced Configuration
+# Instructions to run locally
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+-  `npm install`, or `yarn` on root directory to install dependencies.
+-  `npm start` or `yarn start` to run the project locally.
 
-### Deployment
+# Instructions to run online
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-  Access

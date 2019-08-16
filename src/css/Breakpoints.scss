@@ -1,0 +1,21 @@
+// Media queries definitions
+
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else if $point == tabletP {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $point == tabletL {
+		@media (min-width: 1024px) {
+			@content;
+		}
+	} @else if $point == desktop {
+		@media (min-width: 1280px) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import '../../css/theme.scss';
+
+.header {
+	background-color: $yellow;
+
+	.flex-container {
+		align-items: center;
+		display: flex;
+		height: 50px;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		&__img {
+			max-height: 36px;
+		}
+	}
+
+	&__search {
+		display: flex;
+		margin-left: 40px;
+		width: 100%;
+
+		&__button.button {
+			border-radius: 0 5px 5px 0;
+		}
+
+		&__input-text.input-text {
+			border-radius: 5px 0 0 5px;
+		}
+	}
+}

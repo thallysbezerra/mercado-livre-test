@@ -1,0 +1,20 @@
+@import '../../css/Theme.scss';
+
+.input-text {
+	border: none;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 5px 15px;
+	height: 36px;
+	transition: box-shadow 0.15s ease-in-out;
+	width: 100%;
+
+	&:focus {
+		box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+		outline: none;
+	}
+
+	&::placeholder {
+		color: $grey-medium;
+	}
+}
