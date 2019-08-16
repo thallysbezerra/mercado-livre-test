@@ -4,11 +4,18 @@ import './InputText.scss';
 
 export default class Input extends Component {
 	render() {
-		const { className, onChange, placeholder, value } = this.props;
+		const {
+			className,
+			onChange,
+			onKeyPress,
+			placeholder,
+			value
+		} = this.props;
 		return (
 			<input
 				className={`input-text ${className}`}
 				onChange={onChange}
+				onKeyPress={onKeyPress}
 				placeholder={placeholder}
 				type="text"
 				value={value}
@@ -20,6 +27,7 @@ export default class Input extends Component {
 Input.propTypes = {
 	className: PropTypes.string,
 	onChange: PropTypes.func,
+	onKeyPress: PropTypes.func,
 	placeholder: PropTypes.string.isRequired,
 	value: PropTypes.string
 };

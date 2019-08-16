@@ -1,0 +1,16 @@
+// Layout structure
+
+body {
+	background-color: $grey-light;
+	color: $greyish-black;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@include breakpoint(tabletL) {
+		max-width: 1024px;
+		padding: 0;
+	}
+}

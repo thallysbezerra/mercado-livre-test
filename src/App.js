@@ -1,12 +1,82 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
+import ProductList from './components/ProductList/ProductList';
 
 export default class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			api: null,
+			apiStatus: null,
+			valueOfSearchInput: '',
+			inputValue: ''
+		};
+	}
+
+	onChangeSearchInput = event => {
+		this.setState({
+			valueOfSearchInput: event.target.value
+		});
+	};
+
+	onKeyPressSearchInput(event) {
+		if (event.key === 'Enter') {
+			document.getElementById('searchButton').click();
+		}
+	}
+
+	onClickSearchButton = () => {
+		const { valueOfSearchInput } = this.state;
+
+		this.setState({ apiStatus: 'requesting' }, () => {
+			fetch(
+				`https://api.mercadolibre.com/sites/MLA/search?q=${valueOfSearchInput}`
+			)
+				.then(response => response.json())
+				.then(data => {
+					this.setState({
+						api: data.results,
+						apiStatus: 'success'
+					});
+				})
+				.catch(() => {
+					this.setState({
+						apiStatus: 'error',
+						apiLoading: false
+					});
+				});
+		});
+	};
+
+	searchResult(param) {
+		const { api, apiStatus } = this.state;
+
+		switch (param) {
+			case 'error':
+				return 'Error';
+			case 'requesting':
+				return 'Requesting';
+			case 'success':
+				return <ProductList list={apiStatus === 'success' && api} />;
+			default:
+				return 'Content';
+		}
+	}
+
 	render() {
+		const { apiStatus, valueOfSearchInput } = this.state;
+
 		return (
-			<div className="app">
-				<Header />
-			</div>
+			<>
+				<Header
+					onChangeSearchInput={this.onChangeSearchInput}
+					onClickSearchButton={() => this.onClickSearchButton()}
+					onKeyPressSearchInput={this.onKeyPressSearchInput}
+					valueOfSearchInput={valueOfSearchInput}
+				/>
+
+				<div className="container">{this.searchResult(apiStatus)}</div>
+			</>
 		);
 	}
 }

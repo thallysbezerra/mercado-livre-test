@@ -29,6 +29,8 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "text-mask": "^0.0.2",
+    "text-mask-addons": "^3.8.0"
   }
 }
