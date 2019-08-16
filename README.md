@@ -77,9 +77,11 @@
 
 ## Tests
 
+-  In specific situations was applied TDD (Test Driven Development) concepts.
 -  Jest as test runner inside create-react-app.
 -  Simple tests to verify if application is rendering without crashing and initial states are initializing correctly.
 -  Statics components with snapshots tests to avoid components changes.
+-  Testing if data as number, is entering and returning correctly on `monetaryMask()` function.
 
 # Instructions to run tests
 
