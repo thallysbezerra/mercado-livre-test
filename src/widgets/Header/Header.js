@@ -2,13 +2,14 @@ import React from 'react';
 import './Header.scss';
 import logo from './img/logo-ml.png';
 
-import Button from '../Button/Button';
-import InputText from '../InputText/InputText';
+import Button from '../../components/Button/Button';
+import InputText from '../../components/InputText/InputText';
 
 const Header = ({
 	onChangeSearchInput,
 	onClickSearchButton,
 	onKeyPressSearchInput,
+	searchButtonDisabled,
 	valueOfSearchInput
 }) => (
 	<header className="header">
@@ -30,6 +31,7 @@ const Header = ({
 				/>
 				<Button
 					className="header__search__button"
+					disabled={searchButtonDisabled}
 					id="searchButton"
 					icon="search"
 					onClick={onClickSearchButton}

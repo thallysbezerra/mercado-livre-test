@@ -5,7 +5,7 @@ import monetaryMask from '../../helpers/monetaryMask';
 
 const ProductList = ({ list }) => (
 	<ul className="product-list">
-		{list.map((item, index) => (
+		{list.slice(0, 4).map((item, index) => (
 			<li className="product-list__item" key={index}>
 				<img
 					src={item.thumbnail}

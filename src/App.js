@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import DefaultContent from './components/DefaultContent/DefaultContent';
 import Error from './components/Error/Error';
-import Header from './components/Header/Header';
 import Loading from './components/Loading/Loading';
-import ProductList from './components/ProductList/ProductList';
+
+import Header from './widgets/Header/Header';
+import ProductList from './widgets/ProductList/ProductList';
 
 export default class App extends Component {
 	constructor(props) {
@@ -73,6 +74,7 @@ export default class App extends Component {
 		return (
 			<>
 				<Header
+					searchButtonDisabled={valueOfSearchInput === ''}
 					onChangeSearchInput={this.onChangeSearchInput}
 					onClickSearchButton={() => this.onClickSearchButton()}
 					onKeyPressSearchInput={this.onKeyPressSearchInput}

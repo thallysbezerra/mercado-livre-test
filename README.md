@@ -52,12 +52,15 @@
 -  B.E.M. (Block Element Modifier) class naming methodology.
 -  Breakpoints as mixin, included inside own selector in order to facilitate maintenance.
 -  CSS Grid and CSS Flexbox to define layout structures.
+-  Disabled links are using pointer-events: none to prevent possibilities of click.
 -  Each component have your own SCSS file.
+-  `@keyframes` animations are imported from `animations.scss`.
 -  Mobile first with four breakpoints using:
    -  Only on mobile: Screen resolution <= 767px.
    -  Tablet portrait mode: Screen resolution >= 768px.
    -  Tablet landscape mode: Screen resolution >= 1024px.
    -  Desktop: Screen resolution >= 1280px.
+-  Some animations combining `@keyframes` with `transition`.
 -  Using SASS/SCSS.
 
 ## HTML
@@ -68,12 +71,14 @@
 ## Javascript
 
 -  Arrow functions instead of `bind.this`, simplifying code.
+-  Combining `.map` and `slice()` to list items from API.
+-  Components with multi functionalities are located on directory `/widgets`.
 -  Destructuring of states and props to keep a clean code and declarative.
--  `.map` to list items from API.
 -  `onKeyPress` attributes to provide better UI interaction.
 -  `PropTypes` to better component maintenance and understanding.
 -  Reusable components are located on directory `/components`.
 -  Some components are stateless, focused on performance.
+-  Validation if `<Button />` is disabled based on `<InputText />` state.
 
 ## Tests
 

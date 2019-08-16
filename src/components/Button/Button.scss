@@ -18,6 +18,10 @@
 		cursor: pointer;
 	}
 
+	&:disabled {
+		pointer-events: none;
+	}
+
 	&--small {
 		width: 36px;
 	}
