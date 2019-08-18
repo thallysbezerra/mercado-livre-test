@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.scss';
 
-const Button = ({ children, className, disabled, icon, id, onClick }) => (
+const Button = ({ children, className, disabled, icon, id, onClick, full }) => (
 	<button
-		className={`button ${className} ${icon && !children && 'button--small'}`}
+		className={`button ${className ? className : ''} ${
+			icon && !children ? 'button--small' : ''
+		} ${full ? 'full' : ''}`}
 		disabled={disabled}
 		id={id}
 		onClick={onClick}

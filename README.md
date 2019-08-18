@@ -47,19 +47,22 @@
 
 ## CSS
 
--  All CSS/SCSS theme files are imported on `theme`.
+-  All CSS/SCSS theme files are imported on `Theme.scss`.
 -  Animations on `:hover` in buttons to give feedback of interaction to user.
 -  B.E.M. (Block Element Modifier) class naming methodology.
 -  Breakpoints as mixin, included inside own selector in order to facilitate maintenance.
+-  Colors declarated as variables on `Colors.scss`.
 -  CSS Grid and CSS Flexbox to define layout structures.
 -  Disabled links are using pointer-events: none to prevent possibilities of click.
 -  Each component have your own SCSS file.
--  `@keyframes` animations are imported from `animations.scss`.
--  Mobile first with four breakpoints using:
+-  Font-family Nunito imported from Google Fonts on file `Fonts.scss`.
+-  `@keyframes` animations are imported from `Animations.scss`.
+-  Mobile first with four breakpoints on file `Breakpoints.scss`using:
    -  Only on mobile: Screen resolution <= 767px.
    -  Tablet portrait mode: Screen resolution >= 768px.
    -  Tablet landscape mode: Screen resolution >= 1024px.
    -  Desktop: Screen resolution >= 1280px.
+-  `Normalize.css` was used to set the same initial styles to all HTML elements.
 -  Some animations combining `@keyframes` with `transition`.
 -  Using SASS/SCSS.
 

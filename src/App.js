@@ -13,10 +13,18 @@ export default class App extends Component {
 		this.state = {
 			api: null,
 			apiStatus: null,
-			valueOfSearchInput: '',
-			inputValue: ''
+			inputValue: '',
+			valueOfSearchInput: ''
 		};
 	}
+
+	onClickLogo = () => {
+		this.setState({
+			api: null,
+			apiStatus: null,
+			inputValue: ''
+		});
+	};
 
 	onChangeSearchInput = event => {
 		this.setState({
@@ -76,6 +84,7 @@ export default class App extends Component {
 				<Header
 					searchButtonDisabled={valueOfSearchInput === ''}
 					onChangeSearchInput={this.onChangeSearchInput}
+					onClickLogo={() => this.onClickLogo()}
 					onClickSearchButton={() => this.onClickSearchButton()}
 					onKeyPressSearchInput={this.onKeyPressSearchInput}
 					valueOfSearchInput={valueOfSearchInput}

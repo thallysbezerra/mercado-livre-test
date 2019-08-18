@@ -2,10 +2,10 @@
 
 .product-list {
 	background-color: $white;
+	border-radius: 5px;
 	list-style: none;
 	margin: 0;
 	padding: 0 10px;
-	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 
 	&.hide {
 		height: 0;
@@ -24,11 +24,19 @@
 		grid-gap: 20px;
 		grid-template-columns: 90px 1fr;
 		padding: 10px 0;
+		transition: transform 0.2s ease-in-out;
 
 		@include breakpoint(tabletL) {
 			padding: 15px 0;
 			grid-gap: 30px;
 			grid-template-columns: 120px 1fr;
+		}
+
+		&:hover {
+			@include breakpoint(tabletL) {
+				cursor: pointer;
+				transform: scale(1.025);
+			}
 		}
 
 		&__img {

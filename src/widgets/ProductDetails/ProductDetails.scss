@@ -1,0 +1,61 @@
+@import '../../css/Theme.scss';
+
+.product-details {
+	background-color: $white;
+	border-radius: 5px;
+	padding: 15px;
+
+	@include breakpoint(tabletL) {
+		padding: 20px;
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.grid-container {
+		@include breakpoint(tabletL) {
+			display: grid;
+			grid-template-columns: 1fr 300px;
+		}
+	}
+
+	&__img {
+		border-radius: 5px;
+		display: block;
+		margin: 0 auto 15px;
+		width: 75%;
+
+		@include breakpoint(tabletL) {
+			margin: 0;
+		}
+	}
+
+	&__infos {
+		&__condition-quantity {
+			color: $grey-dark;
+		}
+
+		&__title {
+			font-weight: $bold;
+		}
+
+		&__price {
+			font-size: 42px;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__description {
+		&__title {
+			font-size: 24px;
+			font-weight: $medium;
+		}
+
+		&__text {
+			color: $grey-dark;
+			line-height: 1.5;
+		}
+	}
+}

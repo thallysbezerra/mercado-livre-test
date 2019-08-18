@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button';
 import InputText from '../../components/InputText/InputText';
 
 const Header = ({
+	onClickLogo,
 	onChangeSearchInput,
 	onClickSearchButton,
 	onKeyPressSearchInput,
@@ -14,7 +15,7 @@ const Header = ({
 }) => (
 	<header className="header">
 		<div className="container flex-container">
-			<div className="header__logo">
+			<div className="header__logo" onClick={onClickLogo}>
 				<img
 					className="header__logo__img"
 					src={logo}

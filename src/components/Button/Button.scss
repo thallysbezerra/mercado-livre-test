@@ -11,15 +11,26 @@
 	height: 36px;
 	justify-content: center;
 	outline: none;
-	transition: color 0.15s ease-in-out;
+	transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 
 	&:hover {
-		color: $black !important;
+		color: $black;
 		cursor: pointer;
 	}
 
 	&:disabled {
 		pointer-events: none;
+	}
+
+	&.full {
+		background-color: $blue;
+		color: $white;
+		height: 45px;
+		width: 100%;
+
+		&:hover {
+			background-color: $blue-dark;
+		}
 	}
 
 	&--small {

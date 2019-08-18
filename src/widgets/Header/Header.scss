@@ -12,6 +12,10 @@
 	}
 
 	&__logo {
+		&:hover {
+			cursor: pointer;
+		}
+
 		&__img {
 			max-height: 36px;
 		}
