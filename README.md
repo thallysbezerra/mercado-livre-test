@@ -56,6 +56,7 @@
 -  Disabled links are using pointer-events: none to prevent possibilities of click.
 -  Each component have your own SCSS file.
 -  Font-family Nunito imported from Google Fonts on file `Fonts.scss`.
+-  Icons using Font Awesome as `@font-face` imported from CDN.
 -  `@keyframes` animations are imported from `Animations.scss`.
 -  Mobile first with four breakpoints on file `Breakpoints.scss`using:
    -  Only on mobile: Screen resolution <= 767px.
@@ -81,7 +82,7 @@
 -  `PropTypes` to better component maintenance and understanding.
 -  Reusable components are located on directory `/components`.
 -  Some components are stateless, focused on performance.
--  Validation if `<Button />` is disabled based on `<InputText />` state.
+-  Validation if `<Button />` is disabled based on data entrance in `<InputText />`.
 
 ## Tests
 
@@ -102,4 +103,4 @@
 
 # Instructions to run online
 
--  Access
+-  Access https://ml-test.firebaseapp.com/.

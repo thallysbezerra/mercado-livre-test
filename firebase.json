@@ -1,0 +1,7 @@
+{
+	"hosting": {
+		"site": "ml-test",
+		"public": "build",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}
